@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.bzhang.dota2.abaddon.controller.PositionsController">
+    <bottom>
+        <HBox spacing="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="buttonPlay" onAction="#clickPlay" mnemonicParsing="false" text="Play" />
+                <Button fx:id="buttonPause" onAction="#clickPause" mnemonicParsing="false" text="Pause" />
+                <Slider fx:id="slider" HBox.hgrow="ALWAYS" />
+            <HBox alignment="TOP_RIGHT" prefWidth="100.0">
+               <children>
+                      <Label fx:id="labelCurrentTime" alignment="CENTER" text="-" />
+                      <Label text="/" />
+                      <Label fx:id="labelEndTime" text="-" />
+               </children>
+            </HBox>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+    <center>
+        <ScrollPane prefWidth="800.0" BorderPane.alignment="CENTER">
+            <content>
+                <SplitPane dividerPositions="0.29797979797979796" prefHeight="600.0" prefWidth="802.0">
+                    <items>
+                        <AnchorPane>
+                            <children>
+                                <VBox fx:id="vboxHeroes" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="550.0" prefWidth="550.0">
+                            <children>
+                                <Pane fx:id="paneMinimap">
+                                    <children>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+            </content>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </ScrollPane>
+    </center>
+</BorderPane>
